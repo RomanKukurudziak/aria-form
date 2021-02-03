@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Practice work in accessible forms" />
+    <title>Accessible Form</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">First Name:</label><br />
+      <input
+        type="text"
+        id="name"
+        aria-placeholder="First Name"
+        placeholder="First Name"
+      /><br />
+
+      <label for="last-name">Second Name:</label><br />
+      <input
+        type="text"
+        id="last-name"
+        aria-placeholder="Second Name"
+        placeholder="Second Name"
+      /><br />
+
+      <label for="email">Email:</label><br />
+      <input
+        type="email"
+        id="email"
+        aria-placeholder="Email"
+        placeholder="Email"
+      /><br />
+
+      <label for="phone">Phone:</label><br />
+      <input
+        type="tel"
+        id="phone"
+        aria-placeholder="Phone Number"
+        placeholder="Phone Number"
+      /><br />
+
+      <label for="date">Date:</label><br />
+      <input type="date" id="date" aria-placeholder="date" /><br />
+
+      <label for="Cash Card">Payment Type:</label><br />
+      <label for="cash">Cash:</label>
+      <input type="radio" id="cash" name="payment" value="cash" /><br />
+      <label for="cash">Card:</label>
+      <input type="radio" id="card" name="payment" value="card" /><br />
+
+      <label for="delivery-type">Delivery Type:</label><br />
+      <select name="delivery-type" id="delivery-type" placeholder="Select">
+        <option value="one-day">One day</option>
+        <option value="two-day">Two day</option>
+        <option value="week">One week</option> </select
+      ><br />
+
+      <input type="checkbox" name="subscribe" id="subscribe" />
+      <label for="subscribe">Subscribe for updates</label><br />
+
+      <label for="comment"></label>
+      <input
+        type="textarea"
+        name="comment"
+        id="comment"
+        placeholder="Type here"
+      />
+    </form>
+  </body>
+</html>
