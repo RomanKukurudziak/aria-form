@@ -1,0 +1,114 @@
+textarea {
+  resize: none;
+  font-size: 16px;
+  width: 437px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.form-section-1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin: 20px;
+}
+.form-section-2 {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  font-size: 16px;
+  margin: 20px;
+}
+.form-section-3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin: 20px;
+}
+
+input {
+  font-size: 16px;
+  max-width: 200px;
+  height: 28px;
+  border-radius: 5px;
+  border: 2px solid;
+  margin-bottom: 10px;
+}
+label {
+  margin-bottom: 10px;
+}
+
+.form-section {
+  display: flex;
+}
+
+#delivery-type {
+  font-size: 16px;
+  width: 200px;
+  height: 28px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  max-width: 440px;
+}
+
+span:last-child {
+  margin-bottom: 20px;
+}
+
+button {
+  height: 40px;
+  width: 75px;
+  font-size: 16px;
+  border-radius: 5px;
+
+  margin-top: 20px;
+}
+
+button:last-child {
+  margin-left: 20px;
+}
+
+.comm {
+  justify-content: flex-end;
+  display: flex;
+  max-width: 444px;
+}
+
+#cash,
+#card {
+  margin: 0 10px 10px 0;
+}
+
+select {
+  margin-bottom: 35px;
+}
+
+#subscribe {
+  margin-right: 10px;
+}
+
+@media (max-width: 575px) {
+  .form-section {
+    flex-direction: column;
+  }
+
+  .form-section-1,
+  .form-section-2,
+  .form-section-3 {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+  }
+
+  textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

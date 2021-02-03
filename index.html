@@ -4,68 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Practice work in accessible forms" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Accessible Form</title>
   </head>
   <body>
     <form>
-      <label for="name">First Name:</label><br />
-      <input
-        type="text"
-        id="name"
-        aria-placeholder="First Name"
-        placeholder="First Name "
-      /><br />
+      <div class="wrapper">
+        <div class="form-section">
+          <div class="form-section-1">
+            <label for="name">First Name:</label>
+            <input
+              type="text"
+              id="name"
+              aria-placeholder="First Name"
+              placeholder="First Name"
+            />
 
-      <label for="last-name">Second Name:</label><br />
-      <input
-        type="text"
-        id="last-name"
-        aria-placeholder="Second Name"
-        placeholder="Second Name"
-      /><br />
+            <label for="last-name">Second Name:</label>
+            <input
+              type="text"
+              id="last-name"
+              aria-placeholder="Second Name"
+              placeholder="Second Name"
+            />
 
-      <label for="email">Email:</label><br />
-      <input
-        type="email"
-        id="email"
-        aria-placeholder="Email"
-        placeholder="Email"
-      /><br />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              aria-placeholder="Email"
+              placeholder="Email"
+            />
 
-      <label for="phone">Phone:</label><br />
-      <input
-        type="tel"
-        id="phone"
-        aria-placeholder="Phone Number"
-        placeholder="Phone Number"
-      /><br />
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              id="phone"
+              aria-placeholder="Phone Number"
+              placeholder="Phone Number"
+            />
+          </div>
 
-      <label for="date">Date:</label><br />
-      <input type="date" id="date" aria-placeholder="date" /><br />
+          <div class="form-section-2">
+            <label for="date">Date:</label>
+            <input type="date" id="date" aria-placeholder="date" />
 
-      <label for="Cash Card">Payment Type:</label><br />
-      <label for="cash">Cash:</label>
-      <input type="radio" id="cash" name="payment" value="cash" /><br />
-      <label for="cash">Card:</label>
-      <input type="radio" id="card" name="payment" value="card" /><br />
+            <label for="Cash Card">Payment Type:</label>
 
-      <label for="delivery-type">Delivery Type:</label><br />
-      <select name="delivery-type" id="delivery-type" placeholder="Select">
-        <option value="one-day">One day</option>
-        <option value="two-day">Two day</option>
-        <option value="week">One week</option> </select
-      ><br />
+            <span
+              ><input type="radio" id="cash" name="payment" value="cash" />
+              <label for="cash">Cash</label></span
+            >
+            <span
+              ><input type="radio" id="card" name="payment" value="card" />
+              <label for="cash">Card</label></span
+            >
 
-      <input type="checkbox" name="subscribe" id="subscribe" />
-      <label for="subscribe">Subscribe for updates</label><br />
+            <label for="delivery-type">Delivery Type:</label>
+            <select
+              name="delivery-type"
+              id="delivery-type"
+              placeholder="Select"
+            >
+              <option value="one-day">One day</option>
+              <option value="two-day">Two day</option>
+              <option value="week">One week</option>
+            </select>
 
-      <label for="comment"></label>
-      <input
-        type="textarea"
-        name="comment"
-        id="comment"
-        placeholder="Type here"
-      />
+            <span
+              ><input type="checkbox" name="subscribe" id="subscribe" />
+              <label for="subscribe">Subscribe for updates</label></span
+            >
+          </div>
+        </div>
+        <div class="form-section-3">
+          <label for="comment">Comment:</label>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Type here"
+          ></textarea>
+          <div class="comm">
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+          </div>
+        </div>
+      </div>
     </form>
   </body>
 </html>
