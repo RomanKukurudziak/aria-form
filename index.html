@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Practice work in accessible forms" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/bcd823cb7b.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Accessible Form</title>
   </head>
   <body>
@@ -12,11 +17,11 @@
       <div class="wrapper">
         <div class="form-section">
           <div class="form-section-1">
-            <label for="name">First Name:</label>
+            <label>First Name:</label>
             <input
               type="text"
               id="name"
-              aria-placeholder="First Name"
+              aria-label="ENTER first name"
               placeholder="First Name"
             />
 
@@ -24,7 +29,7 @@
             <input
               type="text"
               id="last-name"
-              aria-placeholder="Second Name"
+              aria-label="ENTER second name"
               placeholder="Second Name"
             />
 
@@ -32,7 +37,7 @@
             <input
               type="email"
               id="email"
-              aria-placeholder="Email"
+              aria-label=" ENTER email"
               placeholder="Email"
             />
 
@@ -40,56 +45,447 @@
             <input
               type="tel"
               id="phone"
-              aria-placeholder="Phone Number"
+              aria-label="enter phone number"
               placeholder="Phone Number"
             />
           </div>
 
           <div class="form-section-2">
-            <label for="date">Date:</label>
-            <input type="date" id="date" aria-placeholder="date" />
+            <div id="myDatepicker" class="datepicker">
+              <div class="date">
+                <label for="id-textbox-1">Date:</label>
 
-            <label for="Cash Card">Payment Type:</label>
+                <input
+                  type="text"
+                  placeholder="mm/dd/yyyy"
+                  id="id-textbox-1"
+                  aria-autocomplete="none"
+                />
 
-            <span
-              ><input type="radio" id="cash" name="payment" value="cash" />
-              <label for="cash">Cash</label></span
-            >
-            <span
-              ><input type="radio" id="card" name="payment" value="card" />
-              <label for="cash">Card</label></span
-            >
+                <button class="icon" aria-label="Choose Date">
+                  <span class="fa fa-calendar-alt fa-2x"></span>
+                </button>
+              </div>
+
+              <div
+                id="id-datepicker-1"
+                class="datepickerDialog"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="id-dialog-label"
+              >
+                <div class="header">
+                  <button class="prevYear" aria-label="previous year">
+                    <span class="fas fa-angle-double-left fa-lg"></span>
+                  </button>
+
+                  <button class="prevMonth" aria-label="previous month">
+                    <span class="fas fa-angle-left fa-lg"></span>
+                  </button>
+
+                  <h2 id="id-dialog-label" class="monthYear" aria-live="polite"
+                    >February 2021</h2
+                  >
+
+                  <button class="nextMonth" aria-label="next month">
+                    <span class="fas fa-angle-right fa-lg"></span>
+                  </button>
+
+                  <button class="nextYear" aria-label="next year">
+                    <span class="fas fa-angle-double-right fa-lg"></span>
+                  </button>
+                </div>
+
+                <table
+                  id="myDatepickerGrid"
+                  class="dates"
+                  role="grid"
+                  aria-labelledby="id-dialog-label"
+                >
+                  <thead>
+                    <tr>
+                      <th scope="col" abbr="Sunday">Su</th>
+                      <th scope="col" abbr="Monday">Mo</th>
+                      <th scope="col" abbr="Tuesday">Tu</th>
+                      <th scope="col" abbr="Wednesday">We</th>
+                      <th scope="col" abbr="Thursday">Th</th>
+                      <th scope="col" abbr="Friday">Fr</th>
+                      <th scope="col" abbr="Saturday">Sa</th>
+                    </tr>
+                  </thead>
+
+                  <tbody
+                    ><tr class="dateRow"
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-01-31"
+                          >31</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-01"
+                          >1</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-02"
+                          >2</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-03"
+                          >3</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="0"
+                          data-date="2021-02-04"
+                          >4</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-05"
+                          >5</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-06"
+                          >6</button
+                        ></td
+                      ></tr
+                    ><tr class="dateRow"
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-07"
+                          >7</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-08"
+                          >8</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-9"
+                          >9</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-10"
+                          >10</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-11"
+                          >11</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-12"
+                          >12</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-13"
+                          >13</button
+                        ></td
+                      ></tr
+                    ><tr class="dateRow"
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-14"
+                          >14</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-15"
+                          >15</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-16"
+                          >16</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-17"
+                          >17</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-18"
+                          >18</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-19"
+                          >19</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-20"
+                          >20</button
+                        ></td
+                      ></tr
+                    ><tr class="dateRow"
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-21"
+                          >21</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-22"
+                          >22</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-23"
+                          >23</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-24"
+                          >24</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-25"
+                          >25</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-26"
+                          >26</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-27"
+                          >27</button
+                        ></td
+                      ></tr
+                    ><tr class="dateRow"
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton"
+                          tabindex="-1"
+                          data-date="2021-02-28"
+                          >28</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-01"
+                          >1</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-02"
+                          >2</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-03"
+                          >3</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-04"
+                          >4</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-05"
+                          >5</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-06"
+                          >6</button
+                        ></td
+                      ></tr
+                    ><tr class="dateRow" style="visibility: hidden"
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-07"
+                          >7</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-08"
+                          >8</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-9"
+                          >9</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-10"
+                          >10</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-11"
+                          >11</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-12"
+                          >12</button
+                        ></td
+                      ><td class="dateCell"
+                        ><button
+                          class="dateButton disabled"
+                          tabindex="-1"
+                          data-date="2021-03-13"
+                          >13</button
+                        ></td
+                      ></tr
+                    ></tbody
+                  >
+                </table>
+
+                <div class="dialogButtonGroup">
+                  <button class="dialogButton" value="cancel">Cancel</button>
+                  <button class="dialogButton" value="ok">OK</button>
+                </div>
+
+                <div class="message" aria-live="polite"> Test </div>
+              </div>
+            </div>
+
+            <!-- Payment type-->
+            <div id="Payment">
+              <div role="radiogroup" aria-labelledby="group_label_1" id="rg1">
+                <p id="group_label_1">Payment Type:</p>
+
+                <div role="radio" aria-checked="false" tabindex="0"> Cash </div>
+                <div role="radio" aria-checked="false" tabindex="-1">
+                  Credit
+                </div>
+              </div>
+            </div>
 
             <label for="delivery-type">Delivery Type:</label>
-            <select
-              name="delivery-type"
-              id="delivery-type"
-              placeholder="Select"
-            >
+            <select name="delivery-type" id="delivery-type">
               <option value="one-day">One day</option>
               <option value="two-day">Two day</option>
               <option value="week">One week</option>
             </select>
 
-            <span
-              ><input type="checkbox" name="subscribe" id="subscribe" />
-              <label for="subscribe">Subscribe for updates</label></span
-            >
+            <div class="container"
+              ><input
+                type="checkbox"
+                role="checkbox"
+                checked
+                name="subscribe"
+                id="subscribe"
+                aria-checked="true"
+              />
+              <label for="subscribe">Subscribe for updates</label>
+            </div>
           </div>
         </div>
         <div class="form-section-3">
-          <label for="comment">Comment:</label>
+          <label id="comment" for="comment">Comment:</label>
           <textarea
             name="comment"
             id="comment"
             placeholder="Type here"
+            aria-label="You may type your comment"
           ></textarea>
           <div class="comm">
-            <button type="submit">Submit</button>
+            <button type="submit" role="button">Submit</button>
             <button type="reset">Clear</button>
           </div>
         </div>
       </div>
     </form>
+
+    <script src="radioButton.js"></script>
+    <script src="radioGroup.js"></script>
+    <script src="calendarButton.js"></script>
+    <script src="dataPicker.js"></script>
+    <script src="dataPickerDay.js"></script>
   </body>
 </html>
