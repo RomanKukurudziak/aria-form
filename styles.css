@@ -40,6 +40,16 @@ input {
   border: 2px solid;
   margin-bottom: 10px;
 }
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  box-shadow: 0 0 15px orange;
+  overflow: visible;
+  z-index: 10;
+}
+
 label {
   margin-bottom: 10px;
   display: block;
